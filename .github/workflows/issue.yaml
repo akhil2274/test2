@@ -1,0 +1,8 @@
+name: akhil
+on: [issues, workflow_dispatch]
+jobs:
+  my:
+    runs-on: ubuntu-latest
+    steps:
+    - name: env
+      run: echo "${{ toJson(github) }}"
