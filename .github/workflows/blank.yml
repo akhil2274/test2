@@ -1,4 +1,4 @@
-name: Hello Workflow
+name: Blank
 
 on: workflow_dispatch
 
