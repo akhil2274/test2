@@ -1,1 +1,7 @@
-API_KEY="123435"
+AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
+
+GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+DATABASE_PASSWORD="MyDatabasePassword123!"
+
+API_KEY="sk_live_xxxxxxxxxxxxxxxxx"
