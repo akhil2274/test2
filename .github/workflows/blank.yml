@@ -3,12 +3,16 @@ name: Blank
 on: workflow_dispatch
 
 jobs:
-  say-hello:
+  security-build-push:
+    name: Security Scan, Build and Push
     runs-on: ubuntu-latest
     steps:
-      - name: Echo Hello
-        run: |
-          echo "${{github.sha}}"
-          echo "${{github.ref}}"
-          echo "${{github.repository}}"
-          echo "${{hashFiles(github)}}"
+      # 1. Checkout source and Git history
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: scan
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
